@@ -14,7 +14,14 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: 0;
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
@@ -36,6 +43,11 @@ li {
 
 a {
   text-decoration: none;
+}
+
+p, ul, ol {
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,8 +81,21 @@ h2 {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+ /* Header */
 
-/* Navigation */
+ .navigation {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 0 70px;
+}
+
+.navigation-list {
+  max-width: 390px;
+  display: flex;
+  align-items: center;
+}
+
 .navigation-link {
   font-style: normal;
   font-weight: 700;
@@ -81,8 +106,15 @@ h2 {
   text-transform: capitalize;
 }
 
+.navigation-user {
+  max-width: 264px;
+  margin-left: auto;
+}
+
+
 /* Button */
 .button {
+  display: inline-block;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
@@ -95,25 +127,24 @@ h2 {
   border-radius: 0.3em;
   text-decoration: none;
 }
+
 .navigation .button {
   width: 160px;
   height: 37px;
 }
 
-
-
-
 /* Container*/
-.container {
+
+.page-container {
   width: 100%;
-  max-width: 1200px;
+  margin: 0 auto;
   
 }
 
 /* Intro */
 .intro {
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   background: url("../img/index-background.png") center no-repeat;
   background-size: cover;
 }
@@ -125,20 +156,77 @@ h2 {
   text-align: center;
 }
 
-.advantages-item:nth-child(4n+1) {
+.advantages-title {
+  margin: 63px auto 31px auto;
+  max-width: 620px;
+  max-height: 72px;
+}
+
+.advantages.description {
+  margin-bottom: 90px;
+}
+
+.advantages-list {
+  
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.advantages-item {
+  width: 400px;
+  height: 384px;
+  flex-grow: 1;
+}
+
+.advantages-item:nth-of-type(even) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item:nth-of-type(4n+1) {
   color: white;
   background-color: #68A2CA;
 }
 
+.photo-1,
+.photo-2 {
+  flex-grow: 2;
+}
+
 /* Search */
+.search {
+  width: 100%;
+  height: 417px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.search-container {
+  width: 592px;
+  height: 233px;
+  margin: 91px 304px 93px 304px;
+}
+
+.search-title {
+  margin-bottom: 29px;
+}
+
+.search-description {
+  margin-bottom: 56px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.search-navigation-link.button {
+  min-width: 544px;
+  padding: 12px 15px;
+  
+}
 
 .result-search {
   text-align: start;
 }
 
-.search {
-  text-align: center;
-}
+
 
  /* Subscription */
 .subscription {
@@ -149,10 +237,51 @@ h2 {
   width: 100%;
   height: 411px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+.subscription-container {
+  width: 800px;
+  height: 223px;
+  margin: 94px 200px;
+}
+.subscription-title {
+  margin-bottom: 29px;
 }
 
-.subscription-catalog {
+.subscription-description {
+  font-size: 22px;
+  width: 475px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+}
+
+.subscription-form {
+  display: flex;
+  height: 60px;
+}
+
+.field {
+  width: 600px;
+  margin: 0;
+  padding: 20px 491px 19px 22px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #F2F2F2;
+}
+
+.subscription-button {
+  width: 200px;
+  padding: 12px 15px;
+  background-color: #82B3D3;
+}
+
+.subscription-catalog.subscription {
   text-align: center;
+  background-image: none;
+  background-color: #fff;
+  color: #000;
 }
 
  /* Inner-header */
@@ -181,4 +310,57 @@ h2 {
   text-transform: uppercase;
  }
 
+ /* Footer */
+ .page-footer {
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .footer-social-list {
+  display: flex;
+  margin: 0;
+ }
+ .footer-social-item:not(:last-child) {
+  margin-right: 26px;
+ }
+
+.footer-social {
+  max-width: 116px;
+  margin-left: 72px;
+}
+
+.footer-contact {
+  max-width: 720px;
+  font-size: 40px;
+}
+
+ .footer-logo {
+  max-width: 115px;
+  margin-right: 72px;
+ }
+
+ /* Catalog-container */
+ .catalog-container {
+  width: 1057px;
+  margin: 0 auto;
+  
+ }
+
+ .catalog-filter-group,
+ .result,
+ .hotel-list,
+ .pagination-list,
+ .pagination,
+ .page-cards {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+ }
 
