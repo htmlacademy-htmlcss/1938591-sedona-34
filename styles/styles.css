@@ -364,7 +364,7 @@ background: rgba(131, 179, 211, 0.12);
 
 .subscription-title {
   margin-bottom: 29px;
-  color: inherits;
+  color: inherit;
 }
 
 .subscription-description {
