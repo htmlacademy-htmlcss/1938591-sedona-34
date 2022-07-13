@@ -478,11 +478,6 @@ background: rgba(131, 179, 211, 0.12);
  }
 
  /* Header-catalog*/
- .catalog-filter-group {
-  display: inline-flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
- }
 
  .filter {
   margin: 20px auto;
@@ -504,6 +499,81 @@ background: rgba(131, 179, 211, 0.12);
 
 .filter-interval label:last-child {
   text-align: right;
+}
+
+/* Range */
+.range-scale {
+  position: relative;
+  width: 288px;
+  height: 4px;
+  margin-bottom: 20px;
+  background-color: #666464;
+  border-radius: 5px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  width: 208px;
+  background-color: #fff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20.06px;
+  height: 20px;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle:hover {
+  background-color: #fff;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+} 
+
+.toggle-min {
+  left: 0;
+  top: -8px;
+}
+
+.toggle-max {
+  right: 0;
+  top: -8px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  
+ }
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.range-input {
+  width: 144px;
+  padding: 0 19px;
+  font: inherit;
+  text-align: start;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
  /* Result*/
